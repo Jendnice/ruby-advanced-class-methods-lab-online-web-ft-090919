@@ -74,6 +74,7 @@ class Song
       file = self.new
       file.name = name
       file.artist_name = artist_name
+      @@all << file 
       
       file
   end
