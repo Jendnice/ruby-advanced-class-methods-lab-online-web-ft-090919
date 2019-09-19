@@ -62,6 +62,21 @@ class Song
       
       file
   end
+  
+  def self.create_from_filename(filename)
+    
+    row = filename.split(" - ")
+    row.collect! do |x| x.gsub(/.mp3\z/, "") end
+    
+      artist_name = row[0]
+      name = row[1]
+
+      file = self.new.save 
+      file.name = name
+      file.artist_name = artist_name
+      
+      file
+  end
     
     
 end
