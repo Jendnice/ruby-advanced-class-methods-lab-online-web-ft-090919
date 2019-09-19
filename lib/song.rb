@@ -71,7 +71,7 @@ class Song
       artist_name = row[0]
       name = row[1]
 
-      file = self.new.save 
+      file = self.new
       file.name = name
       file.artist_name = artist_name
       
